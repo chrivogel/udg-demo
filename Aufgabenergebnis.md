@@ -14,6 +14,7 @@ Ich habe mich für Angular entschieden, da sich das Framework gut für die Erste
 - dynamisches Erzeugen von Feldern auf Basis des Tabellenheaders
 - Bearbeiten der Daten (Neuen Eintrag erstellen, Eintrag bearbeiten/löschen)
 - Anzeige der prozentualen Verteilung als Balken und Tortendiagramm (bei Spalten mit maximal 200 verschiedenen Einträgen)
+- Speichern der Tabellendaten als CSV-Datei
 
 ## Eingesetzte 3rd Party Libraries
 
