@@ -4,7 +4,7 @@
         <div class="d-inline-block" ngbDropdown #chartDrop="ngbDropdown">
           <button type="button" class="btn btn-outline-secondary me-2" id="dropdownManual" ngbDropdownAnchor (click)="chartDrop.open()">{{dropdownTitle}}</button>
           <div ngbDropdownMenu aria-labelledby="dropdownManual">
-            <button ngbDropdownItem (click)="setChartType('pie')">Tortendiagramm</button>
+            <button ngbDropdownItem (click)="setChartType('pie')">Kreisdiagramm</button>
             <button ngbDropdownItem (click)="setChartType('bar')">Balkendiagramm</button>
           </div>
         </div>

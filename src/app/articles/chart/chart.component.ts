@@ -11,8 +11,8 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class ChartComponent implements OnInit {
 
-  readonly BARCHART: string = "Balkendiagramm";
-  readonly PIECHART: string = "Tortendiagramm";
+  readonly BARCHART: string = "Balken";
+  readonly PIECHART: string = "Kreis";
 
   public pieChartData: any;
   public pieChartType: ChartType="bar";

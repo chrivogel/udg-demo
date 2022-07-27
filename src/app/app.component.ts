@@ -22,17 +22,21 @@ export class AppComponent implements OnInit {
   fileChangeListener($event: any): void {
     const files = $event.srcElement.files;
     this.entriesService.importCSVFile(files[0]);
+    this.isMenuCollapsed=true;
   }
 
   createEntryClicked(){
     const modalRef = this.modalService.open(DetailComponent, { size: 'lg', backdrop: 'static' });
+    this.isMenuCollapsed=true;
   }
 
   showChart(){
     const modalRef = this.modalService.open(ChartComponent, { size: 'xl' });
+    this.isMenuCollapsed=true;
   }
 
   saveCSVClicked(){
    this.entriesService.exportCSVFile();
+   this.isMenuCollapsed=true;
   }
 }
