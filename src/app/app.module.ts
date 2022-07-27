@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { ChartComponent } from './articles/chart/chart.component';
 import { NgChartsModule } from 'ng2-charts';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     ListComponent,
@@ -27,7 +27,8 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     ScrollingModule,
     NgChartsModule,
-    NgbDropdownModule
+    NgbDropdownModule,
+    NgbCollapseModule
   ],
   providers: [],
   bootstrap: [AppComponent],

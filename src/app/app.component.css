@@ -5,10 +5,14 @@ html {
 }
 
 .navbar{
-  height: 60px;
+min-height: 60px;
 }
 
 .nav-link{
   cursor: pointer;
+}
+
+.fileInput{
+  width: 350px;
 }
 
