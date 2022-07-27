@@ -13,6 +13,8 @@ export class AppComponent implements OnInit {
 
   constructor(public entriesService: EntriesService, protected modalService: NgbModal) { }
 
+  public isMenuCollapsed = true;
+
   ngOnInit(): void {
 
   }
