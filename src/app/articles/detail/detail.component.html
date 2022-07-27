@@ -1,0 +1,35 @@
+
+<div class="modal-header">
+  <h4 class="modal-title" >Eintrag bearbeiten</h4>
+  <button type="button" (click)="cancel()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+
+
+  <form novalidate (ngSubmit)="saveClicked(form.value)" #form="ngForm">
+    <div class="modal-body">
+    <div>
+      <div *ngFor="let headerItem of this.entriesService?.headerItems; let rowIndex = index" class="form-group">
+        <label class="form-control-label">{{headerItem}}</label>
+        <input type="text" ngModel="{{this.entry[headerItem]}}" class="form-control" name="{{'input_'+rowIndex}}" />
+      </div>
+    </div>
+  </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cancel()">
+        Abbrechen
+      </button>
+
+      <button type="submit" class="btn btn-success">
+       Speichern
+      </button>
+    </div>
+  </form>
+
+
+
+
+
+
+
+
+

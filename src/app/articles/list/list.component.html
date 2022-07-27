@@ -1,0 +1,52 @@
+<cdk-virtual-scroll-viewport
+  itemSize="350"
+  appendOnly
+  class="viewport"
+  #virtualViewport
+>
+  <table class="table table-striped">
+    <thead class="thead-light">
+      <tr *ngIf="this.entriesService.headerItems?.length > 0">
+        <th>Bearbeiten</th>
+        <th>Löschen</th>
+        <th *ngFor="let headerItem of this.entriesService?.headerItems">
+          {{ headerItem }}
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr
+        style="height: 350px"
+        *cdkVirtualFor="let entry of listData; let colIndex = index"
+      >
+        <td>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            (click)="editEntryClicked(colIndex)"
+          >
+            Bearbeiten
+          </button>
+        </td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="deleteEntryClicked(colIndex)"
+          >
+            Löschen
+          </button>
+        </td>
+        <td
+          *ngFor="
+            let headerItem of this.entriesService.headerItems;
+            let rowIndex = index
+          "
+        >
+          {{ entry[headerItem] }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</cdk-virtual-scroll-viewport>

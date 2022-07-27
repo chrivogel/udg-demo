@@ -1,0 +1,14 @@
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+.navbar{
+  height: 60px;
+}
+
+.nav-link{
+  cursor: pointer;
+}
+

@@ -1,0 +1,35 @@
+<div class="modal-header">
+      <h5 class="modal-title">Diagramme</h5>
+      <div class="w-100 text-center">
+        <div class="d-inline-block" ngbDropdown #chartDrop="ngbDropdown">
+          <button type="button" class="btn btn-outline-secondary me-2" id="dropdownManual" ngbDropdownAnchor (click)="chartDrop.open()">{{dropdownTitle}}</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownManual">
+            <button ngbDropdownItem (click)="setChartType('pie')">Tortendiagramm</button>
+            <button ngbDropdownItem (click)="setChartType('bar')">Balkendiagramm</button>
+          </div>
+        </div>
+        <div class="d-inline-block" ngbDropdown #keyDrop="ngbDropdown">
+          <button type="button" class="btn btn-outline-secondary me-2" id="dropdownKeys" ngbDropdownAnchor (click)="keyDrop.open()">{{this.selectedChartKey}}</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownKeys">
+            <button *ngFor="let articleKey of chartSelection" ngbDropdownItem (click)="setChartData(articleKey)">{{articleKey}}</button>
+          </div>
+        </div>
+       </div>
+      <button type="button" (click)="close()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+
+      <div class="chart">
+        <canvas baseChart
+                [data]="pieChartData"
+                [type]="pieChartType"
+                [options]="pieChartOptions"
+                >
+        </canvas>
+      </div>
+    </div>
+
+
+
+
+

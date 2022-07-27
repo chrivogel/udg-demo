@@ -1,0 +1,24 @@
+<div class="modal-header">
+    <h4 class="modal-title">Eintrag löschen</h4>
+  </div>
+
+  <div class="modal-body">
+    <div *ngIf="!this.isDeleting">
+      Willst du den Eintrag wirklich löschen?
+    </div>
+    <div style="text-align: center;" *ngIf="this.isDeleting">
+      <div class="spinner-border  text-secondary" role="status"></div>
+      <div>Der Eintrag wird gelöscht!</div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary"  [disabled]="this.isDeleting" data-dismiss="modal" (click)="cancel()">
+      Abbrechen
+    </button>
+
+    <button type="button" class="btn btn-danger" [disabled]="this.isDeleting"  (click)="confirmDelete()">
+     Löschen
+    </button>
+  </div>
+
