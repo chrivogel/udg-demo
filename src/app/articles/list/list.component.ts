@@ -45,8 +45,8 @@ export class ListComponent implements OnInit {
 
               setTimeout(item=>
                 {
-                  if(item.index >= 0){
-                    this.virtualViewport.scrollToIndex(item.index);
+                  if(data.index >= 0){
+                    this.virtualViewport.scrollToIndex(data.index);
                   }
 
                 }, 200);

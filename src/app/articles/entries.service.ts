@@ -31,7 +31,6 @@ export class EntriesService {
     this.ngxCsvParser.parse(file, { header:true, delimiter: ';' })
     .pipe().subscribe({
       next: (result): void => {
-        console.log('Result', result);
         this.csvRecords = result;
 
         if(this.csvRecords.length>0){
@@ -41,7 +40,6 @@ export class EntriesService {
         this.importingData=false;
       },
       error: (error: NgxCSVParserError): void => {
-        console.log('Error', error);
         this.importingData=false;
       }
     });
